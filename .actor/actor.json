@@ -1,0 +1,17 @@
+{
+  "actorSpecification": 1,
+  "name": "walmart-scraper",
+  "title": "Walmart Scraper (Live Prices, Rollback Deals, Stock & UPC)",
+  "description": "Walmart Scraper: Extract full product catalogs, live prices, Rollbacks, clearance deals, in-store and online stock availability, UPC barcodes, seller fulfillment channels, and reviews. Designed for retail price comparison, omnichannel monitoring, and inventory intelligence at scale online.",
+  "version": "1.0",
+  "meta": {
+    "templateId": "js-crawlee-playwright"
+  },
+  "dockerfile": "../Dockerfile",
+  "input": "./input_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json",
+    "keyValueStore": "./key_value_store_schema.json"
+  },
+  "output": "./output_schema.json"
+}
