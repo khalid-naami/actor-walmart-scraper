@@ -1,0 +1,168 @@
+{
+    "actorSpecification": 1,
+    "fields": {
+        "type": "object",
+        "properties": {
+            "itemId": {
+                "type": "string",
+                "description": "Unique Walmart Item ID or SKU",
+                "nullable": true
+            },
+            "title": {
+                "type": "string",
+                "description": "Full product title",
+                "nullable": true
+            },
+            "price": {
+                "type": "number",
+                "description": "Current active selling price",
+                "nullable": true
+            },
+            "originalPrice": {
+                "type": "number",
+                "description": "Previous retail price before discount (Was price)",
+                "nullable": true
+            },
+            "currency": {
+                "type": "string",
+                "description": "Currency code (USD, CAD)",
+                "nullable": true
+            },
+            "priceType": {
+                "type": "string",
+                "description": "Deal type indicator (Rollback, Reduced price, Clearance, Regular)",
+                "nullable": true
+            },
+            "rating": {
+                "type": "number",
+                "description": "Average customer star rating (0.0 to 5.0)",
+                "nullable": true
+            },
+            "reviewsCount": {
+                "type": "integer",
+                "description": "Total customer ratings and reviews count",
+                "nullable": true
+            },
+            "inStock": {
+                "type": "boolean",
+                "description": "Product inventory availability status",
+                "nullable": true
+            },
+            "stockStatus": {
+                "type": "string",
+                "description": "Stock status text (e.g. In stock, Out of stock)",
+                "nullable": true
+            },
+            "brand": {
+                "type": "string",
+                "description": "Product brand or manufacturer",
+                "nullable": true
+            },
+            "sellerName": {
+                "type": "string",
+                "description": "Sold and shipped by merchant name (Walmart.com or 3rd party Pro Seller)",
+                "nullable": true
+            },
+            "upc": {
+                "type": "string",
+                "description": "Universal Product Code (UPC / GTIN barcode)",
+                "nullable": true
+            },
+            "badge": {
+                "type": "string",
+                "description": "Promotional badge (e.g. Popular pick, Best seller)",
+                "nullable": true
+            },
+            "description": {
+                "type": "string",
+                "description": "Product overview and description summary",
+                "nullable": true
+            },
+            "thumbnail": {
+                "type": "string",
+                "description": "Primary high-resolution product image URL",
+                "nullable": true
+            },
+            "images": {
+                "type": "array",
+                "description": "Full gallery of high-resolution product photos",
+                "nullable": true,
+                "items": {
+                    "type": "string"
+                }
+            },
+            "searchKeyword": {
+                "type": "string",
+                "description": "Search keyword used when discovered via Walmart search",
+                "nullable": true
+            },
+            "url": {
+                "type": "string",
+                "description": "Canonical Walmart product URL",
+                "nullable": true
+            },
+            "scrapedAt": {
+                "type": "string",
+                "description": "Timestamp of extraction",
+                "nullable": true
+            }
+        },
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "additionalProperties": true,
+        "required": []
+    },
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": [
+                    "itemId",
+                    "title",
+                    "price",
+                    "originalPrice",
+                    "currency",
+                    "priceType",
+                    "rating",
+                    "reviewsCount"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "itemId": {
+                        "label": "itemId",
+                        "format": "text"
+                    },
+                    "title": {
+                        "label": "title",
+                        "format": "text"
+                    },
+                    "price": {
+                        "label": "price",
+                        "format": "number"
+                    },
+                    "originalPrice": {
+                        "label": "originalPrice",
+                        "format": "number"
+                    },
+                    "currency": {
+                        "label": "currency",
+                        "format": "text"
+                    },
+                    "priceType": {
+                        "label": "priceType",
+                        "format": "text"
+                    },
+                    "rating": {
+                        "label": "rating",
+                        "format": "number"
+                    },
+                    "reviewsCount": {
+                        "label": "reviewsCount",
+                        "format": "number"
+                    }
+                }
+            }
+        }
+    }
+}
