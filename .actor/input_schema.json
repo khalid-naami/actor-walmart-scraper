@@ -6,22 +6,25 @@
     "productUrls": {
       "title": "Direct Walmart Product URLs",
       "type": "array",
-      "description": "List of direct Walmart product links (e.g. https://www.walmart.com/ip/123456789).",
-      "prefill": [
-        "https://www.walmart.com/ip/123456789"
-      ],
+      "description": "Full https://www.walmart.com/ip/... URLs only (leave empty to search by keywords; plain words belong in Search Keywords below).",
+      "prefill": [],
       "editor": "json"
     },
     "itemIds": {
       "title": "Walmart Item IDs",
       "type": "array",
       "description": "List of numerical Walmart Item IDs (e.g. '123456789', '987654321').",
+      "prefill": [],
       "editor": "json"
     },
     "searchKeywords": {
       "title": "Search Keywords",
       "type": "array",
-      "description": "Keywords to search on Walmart (e.g. 'air fryer', 'lego star wars', 'smart tv 65 inch').",
+      "description": "Keywords to search on Walmart (e.g. 'wireless earbuds', 'ergonomic chair', 'air fryer').",
+      "prefill": [
+        "wireless earbuds",
+        "ergonomic chair"
+      ],
       "editor": "json"
     },
     "sortBy": {
@@ -56,7 +59,7 @@
     "proxyConfiguration": {
       "title": "Proxy Configuration",
       "type": "object",
-      "description": "Use Apify Residential or Datacenter Proxy to bypass Walmart anti-bot detection and geoblocks.",
+      "description": "Walmart enforces strict PerimeterX anti-bot protection (Robot or human?). Select Apify US RESIDENTIAL or UNBLOCKER Proxy group for reliable production runs.",
       "default": {
         "useApifyProxy": true
       },
