@@ -23,9 +23,9 @@ Extract live Walmart product listings, discounted Rollback prices, stock status,
 
 | Field | Type | Default | Description |
 |---|---|---|---|
-| `productUrls` | Array | `["https://www.walmart.com/ip/..."]` | List of direct Walmart product links. |
+| `productUrls` | Array | `[]` | List of direct Walmart product links (leave empty to search by keywords). |
 | `itemIds` | Array | `[]` | List of numerical Walmart Item IDs. |
-| `searchKeywords` | Array | `[]` | Keywords to search on Walmart (e.g. `'air fryer'`). |
+| `searchKeywords` | Array | `["wireless earbuds", "ergonomic chair"]` | Keywords to search on Walmart (e.g. `'wireless earbuds'`). |
 | `sortBy` | String | `"best_seller"` | Sort order: `best_seller`, `price_low`, `price_high`, `rating_high`, `new`. |
 | `maxProducts` | Integer | `40` | Maximum product records to extract per keyword. |
 | `proxyConfiguration` | Object | `{ "useApifyProxy": true }` | Apify Proxy settings to bypass anti-scraping blocks. |
